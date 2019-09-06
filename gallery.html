@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="https://scontent-ams4-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/34985061_1578449938933415_1648493780615036928_n.jpg?_nc_cat=103&_nc_ht=scontent-ams4-1.xx&oh=ce714060171a0397f2f951f162885a54&oe=5D861490" type="image/x-icon">
+
+    <title>Gallery</title>
+  </head>
+  <body>
+  <style>.hvrbox,
+      .hvrbox * {
+        box-sizing: border-box;
+      }
+      .hvrbox {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        max-width: 100%;
+        height: auto;
+      }
+      .hvrbox img {
+        max-width: 100%;
+      }
+      .hvrbox .hvrbox-layer_bottom {
+        display: block;
+      }
+      .hvrbox .hvrbox-layer_top {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 280px ;
+        height: 350px;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        padding: 15px;
+        -moz-transition: all 0.4s ease-in-out 0s;
+        -webkit-transition: all 0.4s ease-in-out 0s;
+        -ms-transition: all 0.4s ease-in-out 0s;
+        transition: all 0.4s ease-in-out 0s;
+      }
+      .hvrbox:hover .hvrbox-layer_top,
+      .hvrbox.active .hvrbox-layer_top {
+        opacity: 1;
+      }
+      .hvrbox .hvrbox-text {
+        text-align: center;
+        font-size: 18px;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -moz-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      .hvrbox .hvrbox-text_mobile {
+        font-size: 15px;
+        border-top: 1px solid rgb(179, 179, 179); /* for old browsers */
+        border-top: 1px solid rgba(179, 179, 179, 0.7);
+        margin-top: 5px;
+        padding-top: 2px;
+        display: none;
+      }
+      .hvrbox.active .hvrbox-text_mobile {
+        display: block;
+      }
+
+
+
+
+
+
+
+      
+      </style>
+<!--  <style>
+            .container {
+              position: relative;
+              width: 50%;
+            }
+            
+            .image {
+              display: block;
+              width: 100%;
+              height: auto;
+            }
+            
+            .overlay {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              height: 350px;
+              width: 260px;
+              opacity: 0;
+              transition: .10s ease;
+              background-color: #008CBA;
+            }
+            
+            .container:hover .overlay {
+              opacity: 1;
+            }
+            
+            .text {
+              color: white;
+              font-size: 20px;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              -webkit-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+              text-align: center;
+            }
+            </style> -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark px-2">
+          <a href="index.html">          <img src="assets/images/NAAMLOGO 6.jpg"  alt="ASINUSxx" style="float:left;width:120px;height:60px;margin-top: 10px;border-style: inset;"></a>
+      
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-item nav-link px-2" href="Resume.html">Resume</a>
+                  <a class="nav-item nav-link px-2" href="gallery.html">Gallery</a>
+                  <a class="nav-item nav-link px-2" href="place.html">Place</a>
+                  <a class="nav-item nav-link px-2" href="contact.html">Contact</a>
+      
+                </div>
+                
+              </div>
+            </nav>
+           
+
+
+            
+    <br>
+    
+    <main>
+    <div class="container container-fluid gallery-container">
+      <h1 class="text-center mt-5">Gallery</h1>
+      <p class="page-description text-center text-muted">Asinus XX originated in 2007 by Deborah Pizzichillo Crist' Carlon'. Asinus XX started off as Deborah Pizzichillo Crist' Carlon's artist 'Tag' and is going to evolve into a lifestyle brand. Asinus XX is going to open up a shop and is going to sell some designs and merch items. Asinus XX is a lifestyle brand that is backed with inspiration from classical art, street art and adventure with the hopes of spreading positive vibes. Here at Asinus XX we push equality and hopefully inspire people to Follow Their Bliss.</p>
+
+      <section class="light-theme">
+          <ul class="secondarylist">   
+            <ul>
+            <!--<div class="container">-->
+                <div class="hvrbox">
+            <img src="http://www.wimclaeys.be/wp-content/themes/wimclaeys/img/blog-post-has-no-thumbnail.png" alt="logo flower" width="280" height="350" style="margin-right: 30px"  class="hvrbox-layer_bottom">
+           <!-- <div class="overlay">
+                <div class="text">Hello World</div>
+              </div>
+            </div>-->
+            <div class="hvrbox-layer_top">
+                <div class="hvrbox-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor ligula porttitor, lacinia sapien non.</div>
+              </div>
+            </div>
+
+            <div class="hvrbox">
+            <img src="http://www.wimclaeys.be/wp-content/themes/wimclaeys/img/blog-post-has-no-thumbnail.png" alt="study oldmasters" width="280" height="350" style="margin-right: 30px">
+            <div class="hvrbox-layer_top">
+                <div class="hvrbox-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor ligula porttitor, lacinia sapien non.</div>
+              </div>
+            </div>
+
+            <div class="hvrbox">
+            <img src="http://www.wimclaeys.be/wp-content/themes/wimclaeys/img/blog-post-has-no-thumbnail.png" alt="nude" width="280" height="350" style="margin-right: 20px">
+            <div class="hvrbox-layer_top">
+                <div class="hvrbox-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor ligula porttitor, lacinia sapien non.</div>
+              </div>
+            </div>
+
+            <div class="hvrbox">
+            <img src="http://www.wimclaeys.be/wp-content/themes/wimclaeys/img/blog-post-has-no-thumbnail.png" alt="Portraits" width="280" height="350" style="margin-right: 30px">
+            <div class="hvrbox-layer_top">
+                <div class="hvrbox-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor ligula porttitor, lacinia sapien non.</div>
+              </div>
+            </div>
+
+            <div class="hvrbox">
+            <img src="http://www.wimclaeys.be/wp-content/themes/wimclaeys/img/blog-post-has-no-thumbnail.png"alt="Portraits" width="280" height="350" style="margin-right: 30px">
+            <div class="hvrbox-layer_top">
+                <div class="hvrbox-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor ligula porttitor, lacinia sapien non.</div>
+              </div>
+            </div>
+            
+            <div class="hvrbox">
+                <img src="http://www.wimclaeys.be/wp-content/themes/wimclaeys/img/blog-post-has-no-thumbnail.png"alt="Portraits" width="280" height="350" style="margin-right: 30px">
+                <div class="hvrbox-layer_top">
+                    <div class="hvrbox-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor ligula porttitor, lacinia sapien non.</div>
+                  </div>
+                </div>
+            
+             <div class="hvrbox">
+            <img src="http://www.wimclaeys.be/wp-content/themes/wimclaeys/img/blog-post-has-no-thumbnail.png"alt="Portraits" width="280" height="350" style="margin-right: 30px">
+            <div class="hvrbox-layer_top">
+                <div class="hvrbox-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor ligula porttitor, lacinia sapien non.</div>
+              </div>
+            </div>
+
+
+            <div class="hvrbox">
+                <img src="http://www.wimclaeys.be/wp-content/themes/wimclaeys/img/blog-post-has-no-thumbnail.png"alt="Portraits" width="280" height="350" style="margin-right: 30px">
+                <div class="hvrbox-layer_top">
+                    <div class="hvrbox-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor ligula porttitor, lacinia sapien non.</div>
+                  </div>
+                </div>
+
+                <div class="hvrbox">
+                    <img src="http://www.wimclaeys.be/wp-content/themes/wimclaeys/img/blog-post-has-no-thumbnail.png"alt="Portraits" width="280" height="350" style="margin-right: 30px">
+                    <div class="hvrbox-layer_top">
+                        <div class="hvrbox-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor ligula porttitor, lacinia sapien non.</div>
+                      </div>
+                    </div>
+
+        </ul>
+        </ul>
+        </section>
+
+    </main>
+
+    <footer class="container">
+            <div class="row mb-5">
+              <div class="col-md-5">
+                &#169; 2019 ASINUSxx, Inc &#8226; <a href="#">Privacy policy</a> &#8226; <a href="#">Terms</a></div>
+                <div class="col-md-2 offset-5 text-right"><a href="#top">          <a class="nav-item nav-link px-2" href="index.html"><u>Home</u> <span class="sr-only">(current)</span></a>
+                </div>
+            </div>
+          </footer>
+
+       
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+    <script>
+        baguetteBox.run('.tz-gallery');
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="https://scontent-ams4-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/34985061_1578449938933415_1648493780615036928_n.jpg?_nc_cat=103&_nc_ht=scontent-ams4-1.xx&oh=ce714060171a0397f2f951f162885a54&oe=5D861490" type="image/x-icon">
+
+    <title>ASINUS XX -a lifestyle brand-</title>
+     
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<style>
+.cart{
+margin:18px;
+}
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f59b93;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+h5{
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+}
+
+
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: rgb(204, 204, 204);
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+
+
+
+/* begin Scroll Down Button */
+button.scroll_down {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  height: 50px;
+  width: 20px;
+  bottom: 30px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+button.scroll_down:before {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: rgba(250, 127, 12, 0.603);
+  border-radius: 100%;
+  -webkit-animation: scroll_down_btn-animation 2s infinite;
+  animation: scroll_down_btn-animation 2s infinite;
+  box-sizing: border-box;
+}
+
+@keyframes scroll_down_btn-animation {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes scroll_down_btn-animation {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translate(0, 20px);
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* end Scroll Down Button */
+
+h2{
+  padding-top: 15px;
+  padding-left: 3px;
+}
+
+@-webkit-keyframes bounce {
+        0% {
+    transform: scale(1,1) translate(0px, 0px);
+  }
+  
+  30%{
+    transform: scale(1,0.8) translate(0px, 10px); 
+  }
+
+  75%{
+    transform: scale(1,1.1) translate(0px, -25px); 
+  }
+  
+ 100% {
+    transform: scale(1,1) translate(0px, 0px);
+  }
+}
+
+.bounce {
+       
+     -webkit-animation: bounce 3s infinite;
+     padding:0px;    
+}
+
+
+</style>
+
+<body>
+
+  
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark px-2">
+                  
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div class="navbar-nav">
+                    <a class="navbar-brand" href="index.html">
+        <img src="assets/images/NAAMLOGO 6.jpg"  alt="ASINUSxx" style="float:left;width:120px;height:60px;margin-top: 10px;border-style: inset;">
+      </a>
+                    <a class="nav-item nav-link px-2" href="login.html">Log-in</a>
+                    <a class="nav-item nav-link px-2" href="register.html">Register</a> 
+                    <a class="nav-item nav-link px-2" href="aboutasinusxx.html">About Asinus xx</a>
+                       
+                    
+                  </div>
+                  
+                </div>
+    
+                
+              </nav>
+            
+             
+
+
+
+
+
+
+
+
+              
+              <img class='cart' src='https://d30y9cdsu7xlg0.cloudfront.net/png/28468-200.png' onclick='showCart()'>
+             
+             
+
+              <div class="banner">
+                <img src="https://images.unsplash.com/photo-1533118320115-ca8c4e626dcc?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="AT WORK">
+               <h2>THINK BIG,<br>DREAM BIGGER.
+
+
+                
+                
+                <!-- Social Icons -->
+                <div class="col-md-6">
+                  <div class="text-center center-block">
+                    <a href="https://www.linkedin.com/in/deborah-pizzichillo-23970398/" target="_blank"><i id="social-li" class="fa fa-linkedin fa-1x social"></i></a>
+                    <a href="https://github.com/Deborahpizzichillo" target="_blank"><i id="social-gh" class="fa fa-github-alt fa-1x social"></i></a>
+                    <a href="mailto:pizzichillo.deborah@gmail.com"><i id="social-em" class="fa fa-envelope-o fa-1x social"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i id="social-fcc" class="fa fa-instagram fa-1x social"></i></a>
+                    
+                  </div>
+                </div> 
+                
+                
+                
+              </h2>
+            </div>
+            <div class="menu">
+              <table>
+                <tr>
+                  <td class="selected"><a class="nav-item nav-link active px-2" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  </td>
+                  <td><a class="nav-item nav-link px-2" href="Resume.html">Resume</a></td>
+                  
+                 <!--scroll  -->                  
+                  <button type="button" class="scroll_down" id="scroll_down"></button>
+                  
+                  
+                  
+                  <td>   
+                   <!--dropdown-->
+<div class="dropdown">
+    <button class="dropbtn">Gallery
+
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="art.html">Original art work
+ 
+        </a>
+      <a href="clothes.html">Lifestyle clothing</a>
+  </div>
+  </div> 
+ 
+                  </td>
+                  </div>
+                  <td><a class="nav-item nav-link px-2" href="place.html">Place</a>
+                  </td>
+                  <td><a class="nav-item nav-link px-2" href="contact.html">Contact</a></td>
+              
+                    </tr>
+                </table>
+              </div>  
+
+              <br><br>
+
+
+
+              <div class="bounce"> <img src="https://img.icons8.com/metro/30/000000/down.png" style="margin-left:630px" >
+              </div>
+
+
+
+
+
+
+
+
+
+<ul>
+    <table class="centerTable">
+
+<td><table><tr>
+  <br>
+<div class="container mb-5">
+
+      <div class="row justify-content-between">
+       
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1475085807956-5e76cdaf6639?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">News</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp... incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+        <button class="button" style="vertical-align:middle"><span><a href="blog.html">News</a> </span></button>
+
+      </tr></table></td>
+<br>
+<td><table><tr>
+<br> 
+    <div class="container mb-5">
+        <div class="row justify-content-between">
+         
+              <img class="card-img-top" src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Events</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp... incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              
+              </div>
+            </div>
+          </div>
+          <button class="button" style="vertical-align:middle"><span><a href="Events.html">Events</a> </span></button>
+
+
+</tr></table></td>
+</table>
+
+</ul>
+
+
+<!--still not working *argggg*-->
+<!-- Add Messenger - wp-chatbot - HoliThemes - https://www.holithemes.com/wp-chatbot    
+<div id="htcc-messenger" class="htcc-messenger">
+    <div id="htcc-customerchat" class="fb-customerchat"
+    page_id="....................."
+    theme_color="#2f2f2f"
+    logged_in_greeting="Hallo, kan ik u helpen?"
+    logged_out_greeting="Log in en chat met ons!"
+    ref=""
+    greeting_dialog_display = "hide"
+    greeting_dialog_delay = ""
+    >
+    </div>
+    </div>
+--> 
+
+
+
+ 
+      <!--hulp chat -->
+      
+      <button class="open-button" onclick="openForm()">Chat</button>
+      
+      <div class="chat-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+          <h3>Chat</h3>
+      
+          <label for="msg"><b>Message</b></label>
+          <textarea placeholder="Ask away ..." name="msg" required></textarea>
+      
+          <button type="submit" class="btn">Send</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
+
+        
+<br>    
+        
+      <footer class="container">
+          <div class="row mb-5">
+            <div class="col-md-5">
+              &#169; 2019 ASINUSxx, Inc &#8226; <a href="#">Privacy policy</a> &#8226; <a href="#">Terms</a></div>
+              <div class="col-md-2 offset-5 text-right"><a href="#top">          <a class="nav-item nav-link px-2" href="index.html"><u>Home</u> <span class="sr-only">(current)</span></a>
+              </div>
+          </div>
+
+
+
+
+
+  
+<!-- Social Icons -->
+<div class="col-md-6">
+  <div class="text-center center-block">
+       <a href="https://www.linkedin.com/in/deborah-pizzichillo-23970398/" target="_blank"><i id="social-li" class="fa fa-linkedin fa-3x social"></i></a>
+      <a href="https://github.com/Deborahpizzichillo" target="_blank"><i id="social-gh" class="fa fa-github-alt fa-3x social"></i></a>
+      <a href="mailto:pizzichillo.deborah@gmail.com"><i id="social-em" class="fa fa-envelope-o fa-3x social"></i></a>
+      <a href="https://www.instagram.com/" target="_blank"><i id="social-fcc" class="fa fa-instagram fa-3x social"></i></a>
+
+  </div>
+</div>       
+        </footer>  
+         
+
+      
+
+ 
+ <script src="script.js"></script> 
+</body>
+</html>
+

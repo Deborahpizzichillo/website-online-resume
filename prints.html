@@ -1,0 +1,1009 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="https://scontent-ams4-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/34985061_1578449938933415_1648493780615036928_n.jpg?_nc_cat=103&_nc_ht=scontent-ams4-1.xx&oh=ce714060171a0397f2f951f162885a54&oe=5D861490" type="image/x-icon">
+    <script src=”https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js”></script>
+
+    <script src=”https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js”></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script type=’text/javascript’ src=”js/jquery.mycart/jquery.mycart.js”></script>
+    <title>Original ART</title>
+  </head>
+  <body>
+  <style>
+  
+body {
+  background: rgb(26, 25, 25);
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  color: #eee;
+}
+p{
+  color:rgb(155, 152, 152);
+  padding:20px;
+}
+  
+  
+  
+  .hvrbox,
+      .hvrbox * {
+        box-sizing: border-box;
+      }
+      .hvrbox {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        max-width: 100%;
+        height: auto;
+      }
+      .hvrbox img {
+        max-width: 100%;
+      }
+      .hvrbox .hvrbox-layer_bottom {
+        display: block;
+      }
+      .hvrbox .hvrbox-layer_top {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 280px ;
+        height: 350px;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        padding: 15px;
+        -moz-transition: all 0.4s ease-in-out 0s;
+        -webkit-transition: all 0.4s ease-in-out 0s;
+        -ms-transition: all 0.4s ease-in-out 0s;
+        transition: all 0.4s ease-in-out 0s;
+      }
+      .hvrbox:hover .hvrbox-layer_top,
+      .hvrbox.active .hvrbox-layer_top {
+        opacity: 1;
+      }
+      .hvrbox .hvrbox-text {
+        text-align: center;
+        font-size: 18px;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -moz-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      .hvrbox .hvrbox-text_mobile {
+        font-size: 15px;
+        border-top: 1px solid rgb(179, 179, 179); /* for old browsers */
+        border-top: 1px solid rgba(179, 179, 179, 0.7);
+        margin-top: 5px;
+        padding-top: 2px;
+        display: none;
+      }
+      .hvrbox.active .hvrbox-text_mobile {
+        display: block;
+      }
+
+  /*dropdown*/
+    //dropdown
+.dropdown {
+ text-align: center;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 15px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 10px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #f5b4af;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*
+body{
+  background-color: black;
+}
+
+h1{
+  color:white;
+}
+
+*/    
+
+.cart{
+  width: 40px;
+  height: 40px;
+  position: relative;
+  overflow: hidden;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+
+
+.badge-notify{
+    background:red;
+    position:relative;
+    top: -60px;
+    right: 10px;
+  }
+  .my-cart-icon-affix {
+    position: fixed;
+    z-index: 999;
+  }
+
+
+  .hvrbox,
+      .hvrbox * {
+        box-sizing: border-box;
+      }
+      .hvrbox {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        max-width: 100%;
+        height: auto;
+      }
+      .hvrbox img {
+        max-width: 100%;
+      }
+      .hvrbox .hvrbox-layer_bottom {
+        display: block;
+      }
+      .hvrbox .hvrbox-layer_top {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 150px ;
+        height: 150px;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        padding: 15px;
+        -moz-transition: all 0.4s ease-in-out 0s;
+        -webkit-transition: all 0.4s ease-in-out 0s;
+        -ms-transition: all 0.4s ease-in-out 0s;
+        transition: all 0.4s ease-in-out 0s;
+      }
+      .hvrbox:hover .hvrbox-layer_top,
+      .hvrbox.active .hvrbox-layer_top {
+        opacity: 1;
+      }
+      .hvrbox .hvrbox-text {
+        text-align: center;
+        font-size: 18px;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -moz-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      .hvrbox .hvrbox-text_mobile {
+        font-size: 15px;
+        border-top: 1px solid rgb(179, 179, 179); /* for old browsers */
+        border-top: 1px solid rgba(179, 179, 179, 0.7);
+        margin-top: 5px;
+        padding-top: 2px;
+        display: none;
+      }
+      .hvrbox.active .hvrbox-text_mobile {
+        display: block;
+      }
+
+
+
+
+      .popup-trigger {
+  display: block;
+  width: 170px;
+  right: 2rem;
+  margin: 3em auto;
+  text-align: center;
+  color: rgb(190, 190, 190);
+  font-size: 18px;
+  padding:1rem 2rem;
+  text-decoration:none;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 50em;
+  background: rgb(119, 90, 90);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.07);
+  transition:300ms all;
+}
+
+.popup-trigger:hover {
+    opacity:.8;
+}
+
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: 1000;
+  width: 100%;
+  background-color: rgba(94, 110, 141, 0.9);
+  opacity: 0;
+  visibility: hidden;
+  transition:500ms all;
+
+}
+
+.popup.is-visible {
+  opacity: 1;
+  visibility: visible;
+ transition:1s all;
+}
+
+.popup-container {
+  transform:translateY(-50%);
+  transition:500ms all;
+  position: relative;
+  width: 40%;
+  margin: 2em auto;
+  top: 15%;
+  padding:5rem;
+  background: #FFF;
+  border-radius: .25em .25em .4em .4em;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.is-visible .popup-container {
+  transform:translateY(0);
+  transition:500ms all;
+}
+
+.popup-container .popup-close {
+  position: absolute;
+  top: 8px;
+  font-size:0;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+}
+
+
+.popup-container .popup-close::before,
+.popup-container .popup-close::after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  width: 14px;
+  height: 3px;
+  background-color: #8f9cb5;
+}
+
+.popup-container .popup-close::before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  left: 8px;
+}
+
+.popup-container .popup-close::after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  right: 8px;
+}
+
+
+.popup-container .popup-close:hover:before,
+.popup-container .popup-close:hover:after {
+  background-color:#35a785;
+  transition:300ms all;
+}
+
+h1{
+  color: #f5b4af;
+}
+      </style>
+<!--  <style>
+            .container {
+              position: relative;
+              width: 50%;
+            }
+            
+            .image {
+              display: block;
+              width: 100%;
+              height: auto;
+            }
+            
+            .overlay {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              height: 350px;
+              width: 260px;
+              opacity: 0;
+              transition: .10s ease;
+              background-color: #008CBA;
+            }
+            
+            .container:hover .overlay {
+              opacity: 1;
+            }
+            
+            .text {
+              color: white;
+              font-size: 20px;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              -webkit-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+              text-align: center;
+            }
+            </style> -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark px-2">
+          <a href="index.html">          <img src="assets/images/NAAMLOGO 6.jpg"  alt="ASINUSxx" style="float:left;width:120px;height:60px;margin-top: 10px;border-style: inset;"></a>
+
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-item nav-link px-2" href="Resume.html">Resume</a>
+                   <!--dropdown-->
+                   <div class="dropdown">
+                      <button class="dropbtn">Gallery
+                  
+                        <i class="fa fa-caret-down"></i>
+                      </button>
+                      <div class="dropdown-content">
+                        <li class="divider"></li>
+                        <li class="dropdown-submenu">
+                          <a tabindex="-1" href="art.html">Original art work</a>
+                          <ul class="dropdown-menu">
+                            <li><a tabindex="-1" href="prints.html">Prints and stuff</a></li>
+                          </ul>
+
+
+
+                        <a href="clothes.html">Lifestyle clothing</a>
+                    </div>
+                    </div> 
+                
+ 
+                   
+
+
+
+
+                  <a class="nav-item nav-link px-2" href="place.html">Place</a>
+                  <a class="nav-item nav-link px-2" href="contact.html">Contact</a>
+      
+                </div>
+                
+              </div>
+              <img class='cart' src='https://d30y9cdsu7xlg0.cloudfront.net/png/28468-200.png' onclick='showCart()'>
+  
+              <ol class="cart-modal">
+              </ol>         
+            </nav>
+   
+
+
+            
+    <br>
+    
+    <main>
+    <div class="container container-fluid gallery-container">
+<br>
+      <h1 class="text-center mt-5">Prints and stuff</h1><br>
+      
+      <br>
+      <p class="page-description text-center text-muted">Asinus XX originated in 2007 by Deborah Pizzichillo Crist' Carlon'. Asinus XX started off as Deborah Pizzichillo Crist' Carlon's artist 'Tag' and is going to evolve into a lifestyle brand. Asinus XX is going to open up a shop and is going to sell some designs and merch items. Asinus XX is a lifestyle brand that is backed with inspiration from classical art, street art, tech and adventure with the hopes of spreading positive vibes. Here at Asinus XX we push equality and hopefully inspire people to Follow Their Bliss.</p>
+<br>
+<p>Hover over images for short information:</p>
+<br><br>
+<div class="row">
+    <div class="col-md-3 text-center">
+        <div class="hvrbox">
+      <img src="images/img_4.png" width="150px" height="150px">
+      <div class="hvrbox-layer_top">
+          <div class="hvrbox-text">Art work .......</div>
+        </div>
+          </div>
+      <br>
+      - <strong>€....</strong>
+      <br>
+  <!--popup 1-->
+      <button class="btn btn-danger my-cart-btn" data-id="4" data-name="product 4" data-summary="summary 4" data-price="40" data-quantity="1" data-image="images/img_4.png">Add to Cart</button>
+      <a href="#0" id="info" class="info popup-trigger" title="info">Details</a>
+
+      <div class="popup" role="alert">
+        <div class="popup-container">
+          <a href="#0" class="popup-close img-replace">Close</a>
+          <h1>DETAILS: .....</h1>
+        </div> 
+      </div> 
+          </div> <div class="col-md-3 text-center">
+        <div class="hvrbox">
+      <img src="images/img_4.png" width="150px" height="150px">
+      <div class="hvrbox-layer_top">
+          <div class="hvrbox-text">Art work .......</div>
+        </div>
+          </div>
+      <br>
+    - <strong>€....</strong>
+      <br>
+
+  <!--popup 2-->
+     <button class="btn btn-danger my-cart-btn" data-id="4" data-name="product 4" data-summary="summary 4" data-price="40" data-quantity="1" data-image="images/img_4.png">Add to Cart</button>
+      <a href="#0" id="info" class="info popup-trigger" title="info">Details</a>
+
+      <div class="popup" role="alert">
+        <div class="popup-container">
+          <a href="#0" class="popup-close img-replace">Close</a>
+          <h1>DETAILS: .....</h1>
+        </div> 
+      </div> 
+          </div> <div class="col-md-3 text-center">
+        <div class="hvrbox">
+      <img src="images/img_4.png" width="150px" height="150px">
+      <div class="hvrbox-layer_top">
+          <div class="hvrbox-text">Art work .......</div>
+        </div>
+          </div>
+      <br>
+    - <strong>€....</strong>
+      <br>
+
+        <!--popup 3-->
+     <button class="btn btn-danger my-cart-btn" data-id="4" data-name="product 4" data-summary="summary 4" data-price="40" data-quantity="1" data-image="images/img_4.png">Add to Cart</button>
+      <a href="#0" id="info" class="info popup-trigger" title="info">Details</a>
+
+      <div class="popup" role="alert">
+        <div class="popup-container">
+          <a href="#0" class="popup-close img-replace">Close</a>
+          <h1>DETAILS: .....</h1>
+        </div> 
+      </div> 
+          </div> <div class="col-md-3 text-center">
+        <div class="hvrbox">
+      <img src="images/img_4.png" width="150px" height="150px">
+      <div class="hvrbox-layer_top">
+          <div class="hvrbox-text">Art work .......</div>
+        </div>
+          </div>
+      <br>
+    - <strong>€....</strong>
+      <br>
+
+
+     <!--popup 4-->
+     <button class="btn btn-danger my-cart-btn" data-id="4" data-name="product 4" data-summary="summary 4" data-price="40" data-quantity="1" data-image="images/img_4.png">Add to Cart</button>
+      <a href="#0" id="info" class="info popup-trigger" title="info">Details</a>
+
+      <div class="popup" role="alert">
+        <div class="popup-container">
+          <a href="#0" class="popup-close img-replace">Close</a>
+          <h1>DETAILS: .....</h1>
+        </div> 
+      </div> 
+          </div> <div class="col-md-3 text-center">
+        <div class="hvrbox">
+      <img src="images/img_4.png" width="150px" height="150px">
+      <div class="hvrbox-layer_top">
+          <div class="hvrbox-text">Art work .......</div>
+        </div>
+          </div>
+      <br>
+    - <strong>€....</strong>
+      <br>
+
+
+         <!--popup 5-->
+         <button class="btn btn-danger my-cart-btn" data-id="4" data-name="product 4" data-summary="summary 4" data-price="40" data-quantity="1" data-image="images/img_4.png">Add to Cart</button>
+         <a href="#0" id="info" class="info popup-trigger" title="info">Details</a>
+   
+         <div class="popup" role="alert">
+           <div class="popup-container">
+             <a href="#0" class="popup-close img-replace">Close</a>
+             <h1>DETAILS: .....</h1>
+           </div> 
+         </div> 
+             </div> <div class="col-md-3 text-center">
+           <div class="hvrbox">
+         <img src="images/img_4.png" width="150px" height="150px">
+         <div class="hvrbox-layer_top">
+             <div class="hvrbox-text">Art work .......</div>
+           </div>
+             </div>
+         <br>
+       - <strong>€....</strong>
+         <br>
+   
+
+
+
+       <!--popup 6-->
+       <button class="btn btn-danger my-cart-btn" data-id="4" data-name="product 4" data-summary="summary 4" data-price="40" data-quantity="1" data-image="images/img_4.png">Add to Cart</button>
+       <a href="#0" id="info" class="info popup-trigger" title="info">Details</a>
+ 
+       <div class="popup" role="alert">
+         <div class="popup-container">
+           <a href="#0" class="popup-close img-replace">Close</a>
+           <h1>DETAILS: .....</h1>
+         </div> 
+       </div> 
+           </div> <div class="col-md-3 text-center">
+         <div class="hvrbox">
+       <img src="images/img_4.png" width="150px" height="150px">
+       <div class="hvrbox-layer_top">
+           <div class="hvrbox-text">Art work .......</div>
+         </div>
+           </div>
+       <br>
+     - <strong>€....</strong>
+       <br>
+ 
+
+
+
+          <!--popup 7-->
+     <button class="btn btn-danger my-cart-btn" data-id="4" data-name="product 4" data-summary="summary 4" data-price="40" data-quantity="1" data-image="images/img_4.png">Add to Cart</button>
+     <a href="#0" id="info" class="info popup-trigger" title="info">Details</a>
+
+     <div class="popup" role="alert">
+       <div class="popup-container">
+         <a href="#0" class="popup-close img-replace">Close</a>
+         <h1>DETAILS: .....</h1>
+       </div> 
+     </div> 
+         </div> <div class="col-md-3 text-center">
+       <div class="hvrbox">
+     <img src="images/img_4.png" width="150px" height="150px">
+     <div class="hvrbox-layer_top">
+         <div class="hvrbox-text">Art work .......</div>
+       </div>
+         </div>
+     <br>
+   - <strong>€....</strong>
+     <br>
+
+
+
+         <!--popup 8-->
+     <button class="btn btn-danger my-cart-btn" data-id="4" data-name="product 4" data-summary="summary 4" data-price="40" data-quantity="1" data-image="images/img_4.png">Add to Cart</button>
+      <a href="#0" id="info" class="info popup-trigger" title="info">Details</a>
+
+      <div class="popup" role="alert">
+        <div class="popup-container">
+          <a href="#0" class="popup-close img-replace">Close</a>
+          <h1>DETAILS: .....</h1>
+        </div> 
+      </div> 
+          </div> <div class="col-md-3 text-center">
+        <div class="hvrbox">
+      <img src="images/img_4.png" width="150px" height="150px">
+      <div class="hvrbox-layer_top">
+          <div class="hvrbox-text">Art work .......</div>
+        </div>
+          </div>
+      <br>
+    - <strong>€....</strong>
+      <br>
+
+
+         <!--popup 9-->
+         <button class="btn btn-danger my-cart-btn" data-id="4" data-name="product 4" data-summary="summary 4" data-price="40" data-quantity="1" data-image="images/img_4.png">Add to Cart</button>
+         <a href="#0" id="info" class="info popup-trigger" title="info">Details</a>
+   
+         <div class="popup" role="alert">
+           <div class="popup-container">
+             <a href="#0" class="popup-close img-replace">Close</a>
+             <h1>DETAILS: .....</h1>
+           </div> 
+         </div> 
+             </div> <div class="col-md-3 text-center">
+           <div class="hvrbox">
+         <img src="images/img_4.png" width="150px" height="150px">
+         <div class="hvrbox-layer_top">
+             <div class="hvrbox-text">Art work .......</div>
+           </div>
+             </div>
+         <br>
+       - <strong>€....</strong>
+         <br>
+   
+
+    <!--popup 10-->
+    <button class="btn btn-danger my-cart-btn" data-id="4" data-name="product 4" data-summary="summary 4" data-price="40" data-quantity="1" data-image="images/img_4.png">Add to Cart</button>
+    <a href="#0" id="info" class="info popup-trigger" title="info">Details</a>
+
+    <div class="popup" role="alert">
+      <div class="popup-container">
+        <a href="#0" class="popup-close img-replace">Close</a>
+        <h1>DETAILS: .....</h1>
+      </div> 
+    </div> 
+        </div> <div class="col-md-3 text-center">
+      <div class="hvrbox">
+    <img src="images/img_4.png" width="150px" height="150px">
+    <div class="hvrbox-layer_top">
+        <div class="hvrbox-text">Art work .......</div>
+      </div>
+        </div>
+    <br>
+  - <strong>€....</strong>
+    <br>
+
+
+
+    <!--popup 11-->
+    <button class="btn btn-danger my-cart-btn" data-id="4" data-name="product 4" data-summary="summary 4" data-price="40" data-quantity="1" data-image="images/img_4.png">Add to Cart</button>
+    <a href="#0" id="info" class="info popup-trigger" title="info">Details</a>
+
+    <div class="popup" role="alert">
+      <div class="popup-container">
+        <a href="#0" class="popup-close img-replace">Close</a>
+        <h1>DETAILS: .....</h1>
+      </div> 
+    </div> 
+        </div> <div class="col-md-3 text-center">
+      <div class="hvrbox">
+    <img src="images/img_4.png" width="150px" height="150px">
+    <div class="hvrbox-layer_top">
+        <div class="hvrbox-text">Art work .......</div>
+      </div>
+        </div>
+    <br>
+  - <strong>€....</strong>
+    <br>
+
+
+
+
+    <!--popup 12-->
+    <button class="btn btn-danger my-cart-btn" data-id="4" data-name="product 4" data-summary="summary 4" data-price="40" data-quantity="1" data-image="images/img_4.png">Add to Cart</button>
+    <a href="#0" id="info" class="info popup-trigger" title="info">Details</a>
+
+    <div class="popup" role="alert">
+      <div class="popup-container">
+        <a href="#0" class="popup-close img-replace">Close</a>
+        <h1>DETAILS: .....</h1>
+      </div> 
+    </div> 
+        </div> <div class="col-md-3 text-center">
+      <div class="hvrbox">
+    <img src="images/img_4.png" width="150px" height="150px">
+    <div class="hvrbox-layer_top">
+        <div class="hvrbox-text">Art work .......</div>
+      </div>
+        </div>
+    <br>
+  - <strong>€....</strong>
+    <br>
+
+
+        <!--popup 13-->
+        <button class="btn btn-danger my-cart-btn" data-id="4" data-name="product 4" data-summary="summary 4" data-price="40" data-quantity="1" data-image="images/img_4.png">Add to Cart</button>
+        <a href="#0" id="info" class="info popup-trigger" title="info">Details</a>
+  
+        <div class="popup" role="alert">
+          <div class="popup-container">
+            <a href="#0" class="popup-close img-replace">Close</a>
+            <h1>DETAILS: .....</h1>
+          </div> 
+        </div> 
+            </div> <div class="col-md-3 text-center">
+          <div class="hvrbox">
+        <img src="images/img_4.png" width="150px" height="150px">
+        <div class="hvrbox-layer_top">
+            <div class="hvrbox-text">Art work .......</div>
+          </div>
+            </div>
+        <br>
+      - <strong>€....</strong>
+        <br>
+  
+
+
+      <!--popup 14-->
+      <button class="btn btn-danger my-cart-btn" data-id="4" data-name="product 4" data-summary="summary 4" data-price="40" data-quantity="1" data-image="images/img_4.png">Add to Cart</button>
+      <a href="#0" id="info" class="info popup-trigger" title="info">Details</a>
+
+      <div class="popup" role="alert">
+        <div class="popup-container">
+          <a href="#0" class="popup-close img-replace">Close</a>
+          <h1>DETAILS: .....</h1>
+        </div> 
+      </div> 
+          </div> <div class="col-md-3 text-center">
+        <div class="hvrbox">
+      <img src="images/img_4.png" width="150px" height="150px">
+      <div class="hvrbox-layer_top">
+          <div class="hvrbox-text">Art work .......</div>
+        </div>
+          </div>
+      <br>
+    - <strong>€....</strong>
+      <br>
+
+
+          <!--popup 15-->
+     <button class="btn btn-danger my-cart-btn" data-id="4" data-name="product 4" data-summary="summary 4" data-price="40" data-quantity="1" data-image="images/img_4.png">Add to Cart</button>
+     <a href="#0" id="info" class="info popup-trigger" title="info">Details</a>
+
+     <div class="popup" role="alert">
+       <div class="popup-container">
+         <a href="#0" class="popup-close img-replace">Close</a>
+         <h1>DETAILS: .....</h1>
+       </div> 
+     </div> 
+         </div> <div class="col-md-3 text-center">
+       <div class="hvrbox">
+     <img src="images/img_4.png" width="150px" height="150px">
+     <div class="hvrbox-layer_top">
+         <div class="hvrbox-text">Art work .......</div>
+       </div>
+         </div>
+     <br>
+   - <strong>€....</strong>
+     <br>
+
+
+             <!--popup 16-->
+             <button class="btn btn-danger my-cart-btn" data-id="4" data-name="product 4" data-summary="summary 4" data-price="40" data-quantity="1" data-image="images/img_4.png">Add to Cart</button>
+             <a href="#0" id="info" class="info popup-trigger" title="info">Details</a>
+        
+             <div class="popup" role="alert">
+               <div class="popup-container">
+                 <a href="#0" class="popup-close img-replace">Close</a>
+                 <h1>DETAILS: .....</h1>
+               </div> 
+             </div> 
+                 </div> <div class="col-md-3 text-center">
+               <div class="hvrbox">
+             <img src="images/img_4.png" width="150px" height="150px">
+             <div class="hvrbox-layer_top">
+                 <div class="hvrbox-text">Art work .......</div>
+               </div>
+                 </div>
+             <br>
+           - <strong>€....</strong>
+             <br>
+
+
+             <!--popup 17-->
+             <button class="btn btn-danger my-cart-btn" data-id="4" data-name="product 4" data-summary="summary 4" data-price="40" data-quantity="1" data-image="images/img_4.png">Add to Cart</button>
+             <a href="#0" id="info" class="info popup-trigger" title="info">Details</a>
+        
+             <div class="popup" role="alert">
+               <div class="popup-container">
+                 <a href="#0" class="popup-close img-replace">Close</a>
+                 <h1>DETAILS: .....</h1>
+               </div> 
+             </div> 
+                 </div> <div class="col-md-3 text-center">
+               <div class="hvrbox">
+             <img src="images/img_4.png" width="150px" height="150px">
+             <div class="hvrbox-layer_top">
+                 <div class="hvrbox-text">Art work .......</div>
+               </div>
+                 </div>
+             <br>
+           - <strong>€....</strong>
+             <br>
+
+
+         <!--popup 18-->
+     <button class="btn btn-danger my-cart-btn" data-id="4" data-name="product 4" data-summary="summary 4" data-price="40" data-quantity="1" data-image="images/img_4.png">Add to Cart</button>
+     <a href="#0" id="info" class="info popup-trigger" title="info">Details</a>
+
+     <div class="popup" role="alert">
+       <div class="popup-container">
+         <a href="#0" class="popup-close img-replace">Close</a>
+         <h1>DETAILS: .....</h1>
+       </div> 
+     </div> 
+         </div> <div class="col-md-3 text-center">
+       <div class="hvrbox">
+     <img src="images/img_4.png" width="150px" height="150px">
+     <div class="hvrbox-layer_top">
+         <div class="hvrbox-text">Art work .......</div>
+       </div>
+         </div>
+     <br>
+   - <strong>€....</strong>
+     <br>
+
+
+              <!--popup 19-->
+     <button class="btn btn-danger my-cart-btn" data-id="4" data-name="product 4" data-summary="summary 4" data-price="40" data-quantity="1" data-image="images/img_4.png">Add to Cart</button>
+     <a href="#0" id="info" class="info popup-trigger" title="info">Details</a>
+
+     <div class="popup" role="alert">
+       <div class="popup-container">
+         <a href="#0" class="popup-close img-replace">Close</a>
+         <h1>DETAILS: .....</h1>
+       </div> 
+     </div> 
+         </div> <div class="col-md-3 text-center">
+       <div class="hvrbox">
+     <img src="images/img_4.png" width="150px" height="150px">
+     <div class="hvrbox-layer_top">
+         <div class="hvrbox-text">Art work .......</div>
+       </div>
+         </div>
+     <br>
+   - <strong>€....</strong>
+     <br>
+
+             <!--popup 15-->
+             <button class="btn btn-danger my-cart-btn" data-id="4" data-name="product 4" data-summary="summary 4" data-price="40" data-quantity="1" data-image="images/img_4.png">Add to Cart</button>
+             <a href="#0" id="info" class="info popup-trigger" title="info">Details</a>
+        
+             <div class="popup" role="alert">
+               <div class="popup-container">
+                 <a href="#0" class="popup-close img-replace">Close</a>
+                 <h1>DETAILS: .....</h1>
+               </div> 
+             </div> 
+            
+      
+    </div>
+
+  </div>	
+		
+	
+</main>
+
+<br><br><br>
+    <footer class="container">
+            <div class="row mb-5">
+              <div class="col-md-5">
+                &#169; 2019 ASINUSxx, Inc &#8226; <a href="#">Privacy policy</a> &#8226; <a href="#">Terms</a></div>
+                <div class="col-md-2 offset-5 text-right"><a href="#top">          <a class="nav-item nav-link px-2" href="index.html"><u>Home</u> <span class="sr-only">(current)</span></a>
+                </div>
+            </div>
+            
+          </footer>
+
+       
+
+<script>
+jQuery(document).ready(function($){
+  //open popup
+  $('.popup-trigger').on('click', function(event){
+    event.preventDefault();
+    $('.popup').addClass('is-visible');
+  });
+  
+  //close popup
+  $('.popup').on('click', function(event){
+    if( $(event.target).is('.popup-close') || $(event.target).is('.popup') ) {
+      event.preventDefault();
+      $(this).removeClass('is-visible');
+    }
+  });
+  //close popup when clicking the esc keyboard button
+  $(document).keyup(function(event){
+      if(event.which=='27'){
+        $('.popup').removeClass('is-visible');
+      }
+    });
+});
+
+
+</script>
+          
+          
+          
+          
+          <!-- Optional JavaScript -->
+          <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+    <script>
+        baguetteBox.run('.tz-gallery');
+    </script>
+
+  </body>
+</html>

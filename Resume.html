@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html>
+<title>Resume</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Bad Script' rel='stylesheet'>
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('https://scontent-ams4-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/66055454_726502937808951_1976135523999154176_n.jpg?_nc_cat=107&_nc_oc=AQkXtDSG6UyyMI9ljCKhGjrn29VAphBk1InAUq23fQtetcQs0iLYzIpgPBIk6ltM2Yo&_nc_ht=scontent-ams4-1.xx&oh=0a4550a3580e7343248092fce4a5e890&oe=5DBCF69A');
+  min-height: 100%;
+}
+
+footer{
+  font-size:1px; 
+}
+
+/* Social Icons */
+
+.me-web {
+  margin-top: 0px;
+}
+
+.social:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+.social {
+  -webkit-transform: scale(0.8);
+  color: #333;
+  /* Browser Variations: */
+  -moz-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+}
+
+
+/* Change colour when hover with a mouse */
+
+#social-li:hover {
+  color: #0077B5;
+}
+
+#social-fcc:hover {
+  color: #f77737;
+  
+}
+
+#social-gh:hover {
+  color: #171515;
+}
+
+#social-em:hover {
+  color: #f30909;
+}
+
+
+
+/* begin Scroll Down Button */
+button.scroll_down {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 540px;
+  right: 0;
+  height: 50px;
+  width: 20px;
+  bottom: 50px;
+  background-color: transparent;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+button.scroll_down:before {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: rgb(250, 127, 12);
+  border-radius: 100%;
+  -webkit-animation: scroll_down_btn-animation 2s infinite;
+  animation: scroll_down_btn-animation 2s infinite;
+  box-sizing: border-box;
+}
+
+@keyframes scroll_down_btn-animation {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes scroll_down_btn-animation {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translate(0, 20px);
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* end Scroll Down Button */
+
+
+@-webkit-keyframes bounce {
+        0% {
+    transform: scale(1,1) translate(0px, 0px);
+  }
+  
+  30%{
+    transform: scale(1,0.8) translate(0px, 10px); 
+  }
+
+  75%{
+    transform: scale(1,1.1) translate(0px, -25px); 
+  }
+  
+ 100% {
+    transform: scale(1,1) translate(0px, 0px);
+  }
+}
+
+.bounce {
+       
+     -webkit-animation: bounce 3s infinite;
+     
+}
+
+
+
+
+/*hulp chat*/
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 12px 18px;
+  right: 18px;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 25px;
+  width:80px;
+        height:50px;
+        border-radius:50px;
+        
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+
+
+ 
+  
+.hvrbox,
+      .hvrbox * {
+        box-sizing: border-box;
+      }
+      .hvrbox {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        max-width: 100%;
+        height: auto;
+      }
+      .hvrbox img {
+        max-width: 100%;
+      }
+      .hvrbox .hvrbox-layer_bottom {
+        display: block;
+      }
+      .hvrbox .hvrbox-layer_top {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 140px ;
+        height: 200px;
+        background: rgba(0, 0, 0, 0.918);
+        color: rgba(255, 255, 255, 0.678);
+        padding: 15px;
+        -moz-transition: all 0.4s ease-in-out 0s;
+        -webkit-transition: all 0.4s ease-in-out 0s;
+        -ms-transition: all 0.4s ease-in-out 0s;
+        transition: all 0.4s ease-in-out 0s;
+      }
+      .hvrbox:hover .hvrbox-layer_top,
+      .hvrbox.active .hvrbox-layer_top {
+        opacity: 1;
+      }
+      .hvrbox .hvrbox-text {
+        text-align: center;
+        font-size: 18px;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -moz-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      .hvrbox .hvrbox-text_mobile {
+        font-size: 15px;
+        border-top: 1px solid rgb(179, 179, 179); /* for old browsers */
+        border-top: 1px solid rgba(179, 179, 179, 0.7);
+        margin-top: 5px;
+        padding-top: 2px;
+        display: none;
+      }
+      .hvrbox.active .hvrbox-text_mobile {
+        display: block;
+      }
+
+
+
+
+.h1typewriter{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: rgb(71, 70, 70);
+  font-size: 15px;
+  text-align: center;
+  font-family:'Cousine';
+}
+
+* { 
+  color: rgb(71, 70, 70);
+  text-decoration: none;
+}
+</style>
+<body>
+
+<!-- Sidebar with image -->
+<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+  <div class="bgimg"></div>
+</nav>
+
+<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+<nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="index.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
+    <a href="art.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Portfolio</a>
+    <a href="aboutasinusxx.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
+
+    <div class="text-center center-block">
+        <a href="https://www.linkedin.com/in/deborah-pizzichillo-23970398/" target="_blank"><i id="social-li" class="fa fa-linkedin fa-x social"></i></a>
+       <a href="https://github.com/Deborahpizzichillo" target="_blank"><i id="social-gh" class="fa fa-github-alt fa-x social"></i></a>
+       <a href="mailto:pizzichillo.deborah@gmail.com"><i id="social-em" class="fa fa-envelope-o fa-x social"></i></a>
+       <a href="https://www.instagram.com/" target="_blank"><i id="social-fcc" class="fa fa-instagram fa-x social"></i></a>
+ 
+   </div>
+
+   
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:40%">
+    
+    <!-- Menu icon to open sidebar -->
+    <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+    
+    <!-- Header -->
+    <header class="w3-container w3-center" style="padding:128px 16px" id="home">
+        <h1 class="w3-jumbo"><b>Deborah Pizzichillo</b></h1>
+        <h1 class='h1typewriter'> <!--start of heading-->
+          <a href="#" class=" typewrite" data-period="2000" data-type='["I`m a Web Developer, Artist and Designer! ", "I love coding and making art!"]'>
+          <span class="wrap"></span>
+          </a>
+          </h1> <!--end of heading-->       
+          <button type="button" class="scroll_down" id="scroll_down"></button>
+        
+        <form method="get" action="assets/Resume Pizzichillo Deborah.pdf" target="_blank">
+    <P><img src="https://img.icons8.com/ios/30/000000/submit-progress.png"> <button class="btn" type="submit">Download Resume</button></i></P>  
+      </form>
+      <form method="get" action="assets/motivatiebrief.pdf" target="_blank">
+        <P><img src="https://img.icons8.com/ios/30/000000/submit-progress.png"> <button class="btn" type="submit">Download Motivation letter</button></i></P>  
+          </form>
+  </header>
+<br><br><br><br><br><br>
+  <!-- Portfolio Section -->
+  <div class="w3-padding-32 w3-content" id="portfolio">
+    <h2 class="w3-text-grey"><img src="https://img.icons8.com/wired/40/000000/rebalance-portfolio.png"> My Portfolio</h2>
+    <hr class="w3-opacity">
+    <a href="https://github.com/Deborahpizzichillo"></a> Visit - Web Developer work @ Github <a href="https://github.com/Deborahpizzichillo" target="_blank"><i id="social-gh" class="fa fa-github-alt fa-2x social"></i></a>
+  </a>
+    <br><br>
+    <!-- Grid for photos -->
+    <a class="nav-item nav-link px-2" href="art.html"> Visit/Click this link FOR more - Original Art work, Merch and more :</a><br><br>
+
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+        
+            <div class="hvrbox">
+        <img src="/home/deborah/Bureaublad/everything/Lesley/Lesley 2/Gewonnen!!!.jpg"  width="140" height="200">
+            <div class="hvrbox-layer_top">
+                <div class="hvrbox-text">Digital logo: Ministrare</div>
+
+            </div>
+
+            </div>
+          <div class="hvrbox">
+        <img src="https://scontent-ams4-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/33622886_1562325900545819_6179415236848648192_n.jpg?_nc_cat=108&_nc_ht=scontent-ams4-1.xx&oh=a1eea8fb22f2fbb4d417222243ee8c86&oe=5D5BC35B"   width="140" height="200">
+        <div class="hvrbox-layer_top">
+            <div class="hvrbox-text">Digital logo:  The flower </div>
+          </div>
+            </div>
+            <div class="hvrbox">
+        <img src="https://scontent-ams4-1.xx.fbcdn.net/v/t1.0-9/1782_371887749589646_1807771340_n.jpg?_nc_cat=103&_nc_ht=scontent-ams4-1.xx&oh=f1b41151ed0801da5f04ad5bc6e2f98d&oe=5D889E4D" width="140" height="200">
+        <div class="hvrbox-layer_top">
+            <div class="hvrbox-text">Oil painting:   Nausea</div>
+            </div> 
+            </div>
+            
+            <div class="hvrbox">
+            <img src="https://scontent-ams4-1.xx.fbcdn.net/v/t1.0-9/379687_371888422922912_1697209329_n.jpg?_nc_cat=104&_nc_ht=scontent-ams4-1.xx&oh=4056d85283444b221df83b43fa2c0d9e&oe=5D51C3EC"  width="140" height="200">
+            <div class="hvrbox-layer_top">
+                <div class="hvrbox-text">Oil painting:  Portrait</div>
+                </div> 
+                </div>
+      
+      </div>
+      
+      <div class="w3-half">
+
+          <div class="hvrbox">
+          <img src="https://scontent-ams4-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/66261946_688110741629618_785776546114699264_n.jpg?_nc_cat=105&_nc_oc=AQkLftkYDxFkq-GyWPNwqJ2_L0vU5-aufgtGRE_7KxOG40t4kiXodevl8Joguz64C58&_nc_ht=scontent-ams4-1.xx&oh=486ca65828561fc25f5dcfc2b242a2fd&oe=5DB0218C"  width="150" height="150">
+          <div class="hvrbox-layer_top">
+              <div class="hvrbox-text">Mixed media:  The View</div>
+              </div> 
+              </div>
+          <div class="hvrbox">
+          <img src="https://scontent-ams4-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/64413262_328474058046198_4623187670263136256_n.jpg?_nc_cat=111&_nc_oc=AQmUu7ftKzNPvX5-HBfc9PV8b62GNALPtypFuHe-h9bjZWVuoZ_Bkcoq13xVkxTnwLg&_nc_ht=scontent-ams4-1.xx&oh=46f01f55cb4fd0e596cc0b731e1c6dca&oe=5D857434"  width="140" height="200">
+          <div class="hvrbox-layer_top">
+              <div class="hvrbox-text">Mixed media:  Strong fe(male)</div>
+              </div> 
+              </div>
+          <div class="hvrbox">
+          <img src="https://scontent-ams4-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/66425931_460412218109377_4887400481921433600_n.jpg?_nc_cat=107&_nc_oc=AQk-XmcA4510Wkcx1aOH6dRJbFqYkO3acpMY8dMiOZPktU9jIQGpjw8s6lPlTc1v_zE&_nc_ht=scontent-ams4-1.xx&oh=39d5ffc2dd41d2a3b62b93a9a9f2cbd0&oe=5DAA9060"  width="140" height="200">
+          <div class="hvrbox-layer_top">
+              <div class="hvrbox-text">Mixed media:  Corner of the house</div>
+              </div> 
+              </div>
+          <div class="hvrbox">
+          <img src="https://scontent-ams4-1.xx.fbcdn.net/v/t1.15752-9/66482436_462125244605824_8795446573795377152_n.jpg?_nc_cat=111&_nc_oc=AQmi8OjMjSMUqTAteIwGCMxBU4KTevp3E3hC6Q4DpNI_bickZn8ycN6cdjecD1lTAbw&_nc_ht=scontent-ams4-1.xx&oh=ddcd8f13aa4e474b82464f09c7d604c3&oe=5DA6E4BB"  width="140" height="200">
+          <div class="hvrbox-layer_top">
+              <div class="hvrbox-text">Mixed media:  Bird cart</div>
+              </div> 
+              </div>
+     
+        </div>
+    <!-- End photo grid -->
+    </div>
+  <!-- End Portfolio Section -->
+ <div class="bounce"> <img src="https://img.icons8.com/metro/30/000000/down.png" style="margin-left: 317px">
+  </div>
+  </div>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
+    <h2><i class="fa fa-code fa-lg" aria-hidden="true"></i> About</h2>
+    <hr class="w3-opacity">
+    <p>From an early age I have been passionate about technology,architecture,art and fashion. Here I am! A creative centipede with a great sense of responsibility and a healthy dose of ambition. Customer-friendliness and a good service are qualities that make sense to me. Furthermore, I am someone who attaches great importance to accuracy and I love to challenge myself and keep raising the bar. I am looking for an exciting, tech and creative challenge in which I want to commit myself 100% every day.</p>
+    <p>I am currently in a work environment / study in which we are trained as a Web Developer. Our training uses a unique approach, with a strong focus on self-learning. The advantage of companies is that employees / students of Becode not only learn programming languages, but also learn how to solve problems through cooperation.</p>
+    <p>People in my area describe me as a very creative person who likes to work together, listens well, works hard and likes to finish things well.</p>
+    <p>I'm looking for an interesting workplace, that will give my ambition a space to grow. My plans for the future are to become a full-fledged full stack web developer."</p>
+    <br>
+    <div class="bounce"> <img src="https://img.icons8.com/metro/30/000000/down.png" style="margin-left: 317px" >
+    </div>
+    </div>
+    
+    <h3 class="w3-padding-16"><img src="https://img.icons8.com/wired/30/000000/development-skill.png">  My Skills</h3>
+    <p class="w3-wide">Creativity</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:100%"></div>
+    </div>
+    <p class="w3-wide">Figma</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:70%"></div>
+    </div>
+    <p class="w3-wide">Git</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:90%"></div>
+    </div>
+    <p class="w3-wide">Html</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:95%"></div>
+    </div>
+    <p class="w3-wide">Css, Sass</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:95%"></div>
+    </div>
+    <p class="w3-wide">Javascript, Jquery</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:80%"></div>
+    </div>
+    <p class="w3-wide">Vue.js</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:60%"></div>
+    </div>
+    <p class="w3-wide">Php</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:80%"></div>
+    </div>
+    <p class="w3-wide">MySql</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:60%"></div>
+    </div>
+    <p class="w3-wide">Laravel</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:40%"></div>
+    </div>
+    <p class="w3-wide">Microsoft office</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:90%"></div>
+    </div>
+    <p class="w3-wide">Photography</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:83%"></div>
+    </div>
+    <p class="w3-wide">Adobe Photoshop cs5</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:97%"></div>
+    </div>
+    <p class="w3-wide">Adobe Illustrator</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:65%"></div>
+    </div>
+    <p class="w3-wide">Adobe Indesign</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:85%"></div>
+    </div>
+    <p class="w3-wide">Sketchup</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:70%"></div>
+    </div>
+    <br><br>
+
+
+
+    <h3 class="w3-padding-16"><img src="https://img.icons8.com/ios/40/000000/translation.png">  Languages</h3>
+    <p class="w3-wide">Dutch  <em>(N)</em></p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:100%"></div>
+    </div>
+    <p class="w3-wide">Italian <em>(N)</em></p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:100%"></div>
+    </div>
+    <p class="w3-wide">English</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:95%"></div>
+    </div>
+    <p class="w3-wide">Frence</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:65%"></div>
+    </div>
+    <br><br>
+    
+<!-- Education Section -->
+<div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
+    <h2><img src="https://img.icons8.com/ios/40/000000/course-assign.png"> </i>Work Experience</h2>
+    <hr class="w3-opacity">
+    <ul>
+      <li> <h4> BeCode Genk, 2019 - now
+      </li>  <br>  <em>Junior Web Developer</em></h4>
+</ul>
+
+  <!-- Commission/projects -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
+      <h2><img src="https://img.icons8.com/dotty/40/000000/project-management.png"> </i>Commission/projects<em>(Work Experience)</em></h2>
+      <hr class="w3-opacity">
+      <strong><p><h4><em>2007 - now</em></h4></p></strong> 
+      <strong> <li>Logo's:</strong> Digital and handmade , Photoshop, Illustrator, pencil, color (watercolor) pencil, marker ink, mixed media, screen printing, marker, ... </li>
+      <strong> <li>Interior:</strong> Digital and handmade , Sketchup, sketches and designs / shaping, styling with markers and pencils also the use of KAPPA...</li>
+      <strong> <li>Fashion:</strong> sketches and designs of clothing and accessories</li>
+      <strong> <li>Portraits:</strong> pencil, color (watercolor) pencil, marker, pastel, oil paint, acrylic paint, watercolor,ink, graffiti, mixed media, charcoal, ...</li>
+      <strong> <li>(Nude) model:</strong> pencil, color (watercolor) pencil, marker, pastel, oil paint, acrylic paint,watercolor, ink, graffiti, mixed media, charcoal, ...</li>
+      <strong> <li>Still-life:</strong> pencil, color (watercolor) pencil, marker, pastel, oil paint, acrylic paint,watercolor, ink, graffiti, mixed media, charcoal, ...</li>
+      <strong> <li>Landscapes:</strong> pencil, color (watercolor) pencil, marker, pastel, oil paint, acrylic paint,watercolor, ink, graffiti, mixed media, charcoal, ... </li>
+      <strong> <li>Action and animation figures:</strong> pencil, color (watercolor) pencil, marker (ink), ...</li>
+      <strong> <li>Printing techniques:</strong> high pressure, gravure, screen printing, ...</li>
+      <strong> <li>Graphic sketches </strong> Digital and handmade , Photoshop, Illustrator, ink, ecoline, colored pencil, marker, ...</li>
+      <strong> <li>Merch:</strong> Tshirts, pins,...</li>
+      </ul>
+     <br>
+  <!-- Education Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
+      <h2><img src="https://img.icons8.com/ios/40/000000/motarboard.png"> </i>Education</h2>
+      <hr class="w3-opacity">
+      <ul><h3>EDUCATION: Higher Education </h3>
+        <li> <h4> Prof.Bach. Elektronica -ICT: ICT, BeCode 2019 
+        </li>  <br>  <em>Web Developer (Becode: competentie rapport op niveau PBA/ HBO
+            met (diploma=) attest en getuigenschrift.)</em></h4>
+        <li> <h4> Pxl MAD-faculty Hasselt,2011-2013 </li> <br> <em>Vrij Beeldende Kunsten </em></h4>
+        <br><br><br>
+        <h3>EDUCATION: Secondary Education </h3>
+        <li><h4>Kunstschool Genk,2007-2011<em> (Diploma met artistiek attest/ projectbegeleidster)</em></li> <br> <em></em></h4>
+        <em>Vrij Beeldende Kunsten: 2009 - 2011 ( Diploma met artistiek attest/ projectbegeleidster )</em><br>
+        <em>Beeldende & architecturale binnenhuiskunsten: 2007 - 2009 ( Projectbegeleidster )</em><br>
+        <li><h4> St Jan Bergmanscollege Genk,2005-2007</li> <br> <em></em></h4>
+        <em>Artistieke voor opleiding(Arvo): 2006 - 2007 </em><br>
+        <em>Handel Bedrijfsbeheer: 2005 - 2006</em>
+        <br><br><br>
+        <h3>ADDITIONAL TRAINING</h3>
+        <li><h4> Academie voor Beeldende Kunst & Media Genk, 2001-2012</li> <br> <em></em></h4>
+        <em>Tekenkunst: 2010 - 2012</em><br>
+        <em>Oriëntale Beeldende vorming: 2008 - 2010 ( Getuigenschrift )</em> <br>
+        <em>Beeldende vorming: 2004 - 2008</em><br>
+        <em>Algemeen beeldende vorming: 2001 - 2004</em><br>
+   
+      
+<br><br><br>
+
+    <div class="w3-row w3-center w3-dark-grey w3-padding-16 w3-section">
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">97+</span><br>
+        Partners
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">97+</span><br>
+        Projects Done
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">97+</span><br>
+        Happy Clients
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">97+</span><br>
+        Meetings
+      </div>
+    </div>
+
+    <form method="get" action="assets/Resume Pizzichillo Deborah.pdf" target="_blank">
+      <P><img src="https://img.icons8.com/ios/30/000000/submit-progress.png"> <button class="btn" type="submit">Download Resume</button></i></P>  
+    </form>
+    <form method="get" action="assets/motivatiebrief.pdf" target="_blank">
+      <P><img src="https://img.icons8.com/ios/30/000000/submit-progress.png"> <button class="btn" type="submit">Download Motivation letter</button></i></P>  
+        </form>
+    <br><br>
+    <!-- Testimonials -->
+    <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
+        <h2><img src="https://img.icons8.com/dotty/40/000000/fire-in-my-heart.png"> </i>My Reputation</h2>
+
+        <hr class="w3-opacity">
+    <img src="/w3images/avatar_smoke.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-text-black w3-margin-right">.........</span> ..........</p>
+    <p>...................</p><br>
+   
+    <img src="/w3images/avatar_smoke.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-text-black w3-margin-right">.........</span> ..........</p>
+    <p>...................</p><br>
+
+    <img src="/w3images/avatar_smoke.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-text-black w3-margin-right">.........</span> ..........</p>
+    <p>...................</p><br>
+
+ 
+    <!-- Grid for pricing tables 
+    <h3 class="w3-padding-16">My Price</h3>
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-center w3-card w3-hover-shadow">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
+          <li class="w3-padding-16">Web Design</li>
+          <li class="w3-padding-16">Photography</li>
+          <li class="w3-padding-16">5GB Storage</li>
+          <li class="w3-padding-16">Mail Support</li>
+          <li class="w3-padding-16">
+            <h2>$ 10</h2>
+            <span class="w3-opacity">per month</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="w3-half">
+        <ul class="w3-ul w3-center w3-card w3-hover-shadow">
+          <li class="w3-black w3-xlarge w3-padding-32">Pro</li>
+          <li class="w3-padding-16">Web Design</li>
+          <li class="w3-padding-16">Photography</li>
+          <li class="w3-padding-16">50GB Storage</li>
+          <li class="w3-padding-16">Endless Support</li>
+          <li class="w3-padding-16">
+            <h2>$ 25</h2>
+            <span class="w3-opacity">per month</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+     
+    </div>
+ End Grid/Pricing tables -->
+    
+  <!-- End About Section -->
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
+    <h2><img src="https://img.icons8.com/wired/40/000000/contact-card.png"> Contact Me</h2>
+    <hr class="w3-opacity">
+
+    <div class="w3-section">
+      <p><a href="place.html"><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Limburg-Genk, Be</a></p>
+      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: 0478 19 74 53</p>
+      <p> <a href="mailto:pizzichillo.deborah@gmail.com"><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"></i> Mailto: pizzichillo.deborah@gmail.com</a></p>
+    </div>
+    
+    <!-- Image of location/map -->
+    <img src="https://images.unsplash.com/photo-1491190963855-cb991d5efdc2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=891&q=80" class="w3-image w3-greyscale" style="width:100%;margin:32px 0">
+   
+    <p>Lets get in touch. Send me a message:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+  <!-- End Contact Section -->
+  </div>  
+  
+
+ 
+      <!--hulp chat -->
+      
+      <button class="open-button" onclick="openForm()">Chat</button>
+      
+      <div class="chat-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+          <h3>Chat</h3>
+      
+          <label for="msg"><b>Message</b></label>
+          <textarea placeholder="Ask away ..." name="msg" required></textarea>
+      
+          <button type="submit" class="btn">Send</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
+
+        
+<br>    
+        
+      <footer class="container">
+          <div class="row mb-5">
+            <div class="col-md-5">
+              &#169; 2019 ASINUSxx, Inc &#8226; <a href="#">Privacy policy</a> &#8226; <a href="#">Terms</a></div>
+              <div class="col-md-2 offset-5 text-right"><a href="#top">          <a class="nav-item nav-link px-2" href="index.html"><u>Home</u> <span class="sr-only">(current)</span></a>
+              </div>
+          </div>
+
+  
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
+      
+<!-- Social Icons -->
+<div class="col-md-6">
+    <div class="text-center center-block">
+         <a href="https://www.linkedin.com/in/deborah-pizzichillo-23970398/" target="_blank"><i id="social-li" class="fa fa-linkedin fa-1x social"></i></a>
+        <a href="https://github.com/Deborahpizzichillo" target="_blank"><i id="social-gh" class="fa fa-github-alt fa-1x social"></i></a>
+        <a href="mailto:pizzichillo.deborah@gmail.com"><i id="social-em" class="fa fa-envelope-o fa-1x social"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i id="social-fcc" class="fa fa-instagram fa-1x social"></i></a>
+  
+    </div>
+  </div>       
+
+
+    <div class="col-md-5">
+        &#169; 2019 ASINUSxx, Inc &#8226; <a href="#">Privacy policy</a> &#8226; <a href="#">Terms</a></div>
+        <div class="col-md-2 offset-5 text-right"><a href="#top">          <a class="nav-item nav-link px-2" href="Resume.html"><u>Back to top</u> <span class="sr-only">(current)</span></a>
+        </div> 
+  <!-- End footer -->
+  </footer>
+  
+<!-- END PAGE CONTENT -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// Open and close sidebar
+function openNav() {
+  document.getElementById("mySidebar").style.width = "60%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+
+
+/* begin Scroll Down Button */
+(function() {
+  'use strict';
+  
+  var btnScrollDown = document.querySelector('#scroll_down');
+  
+  function scrollDown() {
+  var windowCoords = document.documentElement.clientHeight;
+  (function scroll() {
+  if (window.pageYOffset < windowCoords) {
+  window.scrollBy(0, 5);
+  setTimeout(scroll, 0);
+  }
+  if (window.pageYOffset > windowCoords) {
+  window.scrollTo(0, windowCoords);
+  }
+  })();
+  }
+  
+  btnScrollDown.addEventListener('click', scrollDown);
+  })();
+  /* end Scroll Down Button */
+
+
+
+
+
+  /*hulp chat*/
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+  }
+
+
+
+//h1typewriter
+var TxtType = function(el, toRotate, period) {
+this.toRotate = toRotate;
+this.el = el;
+this.loopNum = 0;
+this.period = parseInt(period, 10) || 2000;
+this.txt = '';
+this.tick();
+this.isDeleting = false;
+};
+
+TxtType.prototype.tick = function() {
+var i = this.loopNum % this.toRotate.length;
+var fullTxt = this.toRotate[i];
+
+if (this.isDeleting) {
+this.txt = fullTxt.substring(0, this.txt.length - 1);
+} else {
+this.txt = fullTxt.substring(0, this.txt.length + 1);
+}
+
+this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+var that = this;
+var delta = 200 - Math.random() * 100;
+
+if (this.isDeleting) { delta /= 2; }
+
+if (!this.isDeleting && this.txt === fullTxt) {
+delta = this.period;
+this.isDeleting = true;
+} else if (this.isDeleting && this.txt === '') {
+this.isDeleting = false;
+this.loopNum++;
+delta = 500;
+}
+
+setTimeout(function() {
+that.tick();
+}, delta);
+};
+
+window.onload = function() {
+var elements = document.getElementsByClassName('typewrite');
+for (var i=0; i<elements.length; i++) {
+var toRotate = elements[i].getAttribute('data-type');
+var period = elements[i].getAttribute('data-period');
+if (toRotate) {
+new TxtType(elements[i], JSON.parse(toRotate), period);
+}
+}
+// INJECT CSS
+var css = document.createElement("style");
+css.type = "text/css";
+css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+document.body.appendChild(css);
+};
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+@-moz-keyframes glitch {
+    0% {
+        -moz-transform: skew(45deg);
+        transform: skew(45deg);
+    }
+    5.55556% {
+        -moz-transform: skew(55deg);
+        transform: skew(55deg);
+    }
+    11.11111% {
+        -moz-transform: skew(-27deg);
+        transform: skew(-27deg);
+    }
+    16.66667% {
+        -moz-transform: skew(39deg);
+        transform: skew(39deg);
+    }
+    22.22222% {
+        -moz-transform: skew(16deg);
+        transform: skew(16deg);
+    }
+    27.77778% {
+        -moz-transform: skew(-36deg);
+        transform: skew(-36deg);
+    }
+    33.33333% {
+        -moz-transform: skew(-69deg);
+        transform: skew(-69deg);
+    }
+    38.88889% {
+        -moz-transform: skew(-61deg);
+        transform: skew(-61deg);
+    }
+    44.44444% {
+        -moz-transform: skew(-12deg);
+        transform: skew(-12deg);
+    }
+    50% {
+        -moz-transform: skew(-58deg);
+        transform: skew(-58deg);
+    }
+    55.55556% {
+        -moz-transform: skew(13deg);
+        transform: skew(13deg);
+    }
+    61.11111% {
+        -moz-transform: skew(73deg);
+        transform: skew(73deg);
+    }
+    66.66667% {
+        -moz-transform: skew(-15deg);
+        transform: skew(-15deg);
+    }
+    72.22222% {
+        -moz-transform: skew(59deg);
+        transform: skew(59deg);
+    }
+    77.77778% {
+        -moz-transform: skew(22deg);
+        transform: skew(22deg);
+    }
+    83.33333% {
+        -moz-transform: skew(5deg);
+        transform: skew(5deg);
+    }
+    88.88889% {
+        -moz-transform: skew(-57deg);
+        transform: skew(-57deg);
+    }
+    94.44444% {
+        -moz-transform: skew(53deg);
+        transform: skew(53deg);
+    }
+}
+@-webkit-keyframes glitch {
+    0% {
+        -webkit-transform: skew(57deg);
+        transform: skew(57deg);
+    }
+    5.55556% {
+        -webkit-transform: skew(27deg);
+        transform: skew(27deg);
+    }
+    11.11111% {
+        -webkit-transform: skew(1deg);
+        transform: skew(1deg);
+    }
+    16.66667% {
+        -webkit-transform: skew(-11deg);
+        transform: skew(-11deg);
+    }
+    22.22222% {
+        -webkit-transform: skew(35deg);
+        transform: skew(35deg);
+    }
+    27.77778% {
+        -webkit-transform: skew(-68deg);
+        transform: skew(-68deg);
+    }
+    33.33333% {
+        -webkit-transform: skew(-66deg);
+        transform: skew(-66deg);
+    }
+    38.88889% {
+        -webkit-transform: skew(49deg);
+        transform: skew(49deg);
+    }
+    44.44444% {
+        -webkit-transform: skew(64deg);
+        transform: skew(64deg);
+    }
+    50% {
+        -webkit-transform: skew(-78deg);
+        transform: skew(-78deg);
+    }
+    55.55556% {
+        -webkit-transform: skew(-78deg);
+        transform: skew(-78deg);
+    }
+    61.11111% {
+        -webkit-transform: skew(-34deg);
+        transform: skew(-34deg);
+    }
+    66.66667% {
+        -webkit-transform: skew(31deg);
+        transform: skew(31deg);
+    }
+    72.22222% {
+        -webkit-transform: skew(67deg);
+        transform: skew(67deg);
+    }
+    77.77778% {
+        -webkit-transform: skew(59deg);
+        transform: skew(59deg);
+    }
+    83.33333% {
+        -webkit-transform: skew(-19deg);
+        transform: skew(-19deg);
+    }
+    88.88889% {
+        -webkit-transform: skew(60deg);
+        transform: skew(60deg);
+    }
+    94.44444% {
+        -webkit-transform: skew(74deg);
+        transform: skew(74deg);
+    }
+}
+@keyframes glitch {
+    0% {
+        -moz-transform: skew(21deg);
+        -ms-transform: skew(21deg);
+        -webkit-transform: skew(21deg);
+        transform: skew(21deg);
+    }
+    5.55556% {
+        -moz-transform: skew(-17deg);
+        -ms-transform: skew(-17deg);
+        -webkit-transform: skew(-17deg);
+        transform: skew(-17deg);
+    }
+    11.11111% {
+        -moz-transform: skew(-44deg);
+        -ms-transform: skew(-44deg);
+        -webkit-transform: skew(-44deg);
+        transform: skew(-44deg);
+    }
+    16.66667% {
+        -moz-transform: skew(-27deg);
+        -ms-transform: skew(-27deg);
+        -webkit-transform: skew(-27deg);
+        transform: skew(-27deg);
+    }
+    22.22222% {
+        -moz-transform: skew(32deg);
+        -ms-transform: skew(32deg);
+        -webkit-transform: skew(32deg);
+        transform: skew(32deg);
+    }
+    27.77778% {
+        -moz-transform: skew(41deg);
+        -ms-transform: skew(41deg);
+        -webkit-transform: skew(41deg);
+        transform: skew(41deg);
+    }
+    33.33333% {
+        -moz-transform: skew(48deg);
+        -ms-transform: skew(48deg);
+        -webkit-transform: skew(48deg);
+        transform: skew(48deg);
+    }
+    38.88889% {
+        -moz-transform: skew(-74deg);
+        -ms-transform: skew(-74deg);
+        -webkit-transform: skew(-74deg);
+        transform: skew(-74deg);
+    }
+    44.44444% {
+        -moz-transform: skew(36deg);
+        -ms-transform: skew(36deg);
+        -webkit-transform: skew(36deg);
+        transform: skew(36deg);
+    }
+    50% {
+        -moz-transform: skew(-38deg);
+        -ms-transform: skew(-38deg);
+        -webkit-transform: skew(-38deg);
+        transform: skew(-38deg);
+    }
+    55.55556% {
+        -moz-transform: skew(-14deg);
+        -ms-transform: skew(-14deg);
+        -webkit-transform: skew(-14deg);
+        transform: skew(-14deg);
+    }
+    61.11111% {
+        -moz-transform: skew(47deg);
+        -ms-transform: skew(47deg);
+        -webkit-transform: skew(47deg);
+        transform: skew(47deg);
+    }
+    66.66667% {
+        -moz-transform: skew(72deg);
+        -ms-transform: skew(72deg);
+        -webkit-transform: skew(72deg);
+        transform: skew(72deg);
+    }
+    72.22222% {
+        -moz-transform: skew(3deg);
+        -ms-transform: skew(3deg);
+        -webkit-transform: skew(3deg);
+        transform: skew(3deg);
+    }
+    77.77778% {
+        -moz-transform: skew(6deg);
+        -ms-transform: skew(6deg);
+        -webkit-transform: skew(6deg);
+        transform: skew(6deg);
+    }
+    83.33333% {
+        -moz-transform: skew(25deg);
+        -ms-transform: skew(25deg);
+        -webkit-transform: skew(25deg);
+        transform: skew(25deg);
+    }
+    88.88889% {
+        -moz-transform: skew(3deg);
+        -ms-transform: skew(3deg);
+        -webkit-transform: skew(3deg);
+        transform: skew(3deg);
+    }
+    94.44444% {
+        -moz-transform: skew(-12deg);
+        -ms-transform: skew(-12deg);
+        -webkit-transform: skew(-12deg);
+        transform: skew(-12deg);
+    }
+}
+@-moz-keyframes noise {
+    0% {
+        background-position: -4px 5px;
+    }
+    10% {
+        background-position: -55px 49px;
+    }
+    20% {
+        background-position: -49px -25px;
+    }
+    30% {
+        background-position: 91px 12px;
+    }
+    40% {
+        background-position: -10px -62px;
+    }
+    50% {
+        background-position: -2px -60px;
+    }
+    60% {
+        background-position: -7px 25px;
+    }
+    70% {
+        background-position: -31px -27px;
+    }
+    80% {
+        background-position: 27px -46px;
+    }
+    90% {
+        background-position: 88px -28px;
+    }
+}
+@-webkit-keyframes noise {
+    0% {
+        background-position: -8px -80px;
+    }
+    10% {
+        background-position: 84px -20px;
+    }
+    20% {
+        background-position: -13px 90px;
+    }
+    30% {
+        background-position: 28px -2px;
+    }
+    40% {
+        background-position: -66px -11px;
+    }
+    50% {
+        background-position: 73px 27px;
+    }
+    60% {
+        background-position: -31px -24px;
+    }
+    70% {
+        background-position: -32px -18px;
+    }
+    80% {
+        background-position: 46px 53px;
+    }
+    90% {
+        background-position: 40px -60px;
+    }
+}
+@keyframes noise {
+    0% {
+        background-position: -37px -5px;
+    }
+    10% {
+        background-position: 86px -90px;
+    }
+    20% {
+        background-position: 56px -15px;
+    }
+    30% {
+        background-position: 9px -10px;
+    }
+    40% {
+        background-position: 19px 9px;
+    }
+    50% {
+        background-position: -41px 80px;
+    }
+    60% {
+        background-position: 82px 55px;
+    }
+    70% {
+        background-position: 75px 40px;
+    }
+    80% {
+        background-position: 16px 0px;
+    }
+    90% {
+        background-position: 70px -4px;
+    }
+}
+@-moz-keyframes bar {
+    0% {
+        height: 610px;
+        top: 39%;
+        opacity: 0.2;
+    }
+    10% {
+        height: 246px;
+        top: 92%;
+        opacity: 0.63;
+    }
+    20% {
+        height: 562px;
+        top: 73%;
+        opacity: 0.13;
+    }
+    30% {
+        height: 164px;
+        top: 31%;
+        opacity: 0.39;
+    }
+    40% {
+        height: 508px;
+        top: 73%;
+        opacity: 0.1;
+    }
+    50% {
+        height: 385px;
+        top: 51%;
+        opacity: 0.37;
+    }
+    60% {
+        height: 399px;
+        top: 46%;
+        opacity: 0.57;
+    }
+    70% {
+        height: 480px;
+        top: 12%;
+        opacity: 0.29;
+    }
+    80% {
+        height: 252px;
+        top: 36%;
+        opacity: 0.64;
+    }
+    90% {
+        height: 488px;
+        top: 20%;
+        opacity: 0.65;
+    }
+}
+@-webkit-keyframes bar {
+    0% {
+        height: 505px;
+        top: 100%;
+        opacity: 0.79;
+    }
+    10% {
+        height: 264px;
+        top: 94%;
+        opacity: 0.09;
+    }
+    20% {
+        height: 524px;
+        top: 11%;
+        opacity: 0.72;
+    }
+    30% {
+        height: 386px;
+        top: 17%;
+        opacity: 0.54;
+    }
+    40% {
+        height: 49px;
+        top: 63%;
+        opacity: 0.22;
+    }
+    50% {
+        height: 346px;
+        top: 90%;
+        opacity: 0.42;
+    }
+    60% {
+        height: 230px;
+        top: 94%;
+        opacity: 0.41;
+    }
+    70% {
+        height: 430px;
+        top: 53%;
+        opacity: 0.34;
+    }
+    80% {
+        height: 492px;
+        top: 42%;
+        opacity: 0.23;
+    }
+    90% {
+        height: 164px;
+        top: 57%;
+        opacity: 0.61;
+    }
+}
+@keyframes bar {
+    0% {
+        height: 375px;
+        top: 57%;
+        opacity: 0.67;
+    }
+    10% {
+        height: 284px;
+        top: 87%;
+        opacity: 0.29;
+    }
+    20% {
+        height: 350px;
+        top: 52%;
+        opacity: 0.31;
+    }
+    30% {
+        height: 40px;
+        top: 68%;
+        opacity: 0.62;
+    }
+    40% {
+        height: 360px;
+        top: 69%;
+        opacity: 0.13;
+    }
+    50% {
+        height: 520px;
+        top: 94%;
+        opacity: 0.05;
+    }
+    60% {
+        height: 36px;
+        top: 88%;
+        opacity: 0.07;
+    }
+    70% {
+        height: 547px;
+        top: 64%;
+        opacity: 0.01;
+    }
+    80% {
+        height: 608px;
+        top: 35%;
+        opacity: 0.23;
+    }
+    90% {
+        height: 69px;
+        top: 92%;
+        opacity: 0.45;
+    }
+}
+.glitch {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font: 15px "Michroma", helvetica, sans-serif;
+    letter-spacing: 0.6em;
+    background-image: url(http://api.thumbr.it/whitenoise-361x370.png?background=000000ff&noise=ffffff&density=61&opacity=20);
+    text-shadow: 2px 0 1px #f6050a, -2px 0 1px #1cf2f2;
+    -moz-animation: noise 0.3s infinite;
+    -webkit-animation: noise 0.3s infinite;
+    animation: noise 0.3s infinite;
+}
+.glitch:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+.glitch:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: url(http://api.thumbr.it/whitenoise-361x370.png?background=000000ff&noise=ffffff&density=61&opacity=40);
+    -moz-animation: bar 0.5s infinite;
+    -webkit-animation: bar 0.5s infinite;
+    animation: bar 0.5s infinite;
+}
+.glitch span {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+    -moz-animation: glitch 3s infinite alternate;
+    -webkit-animation: glitch 3s infinite alternate;
+    animation: glitch 3s infinite alternate;
+}
+
+
+</style>
+<body>   
+   <p>Under contruction</p>
+
+    <div class="glitch"><span>UNDER CONTSRUCTION !    <em></em><a href="index.html"> GO BACK HOME</a></em>  
+</span>
+    </div>
+</body>
+</html>

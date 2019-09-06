@@ -1,0 +1,565 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: rgb(26, 25, 25);
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  color: #eee;
+}
+p{
+  color:rgb(155, 152, 152);
+  text-align: center;
+}
+
+b{
+  color:rgb(148, 148, 148);
+}
+
+.showcase {
+  display: block;
+  height: 584px;
+  width: 100%;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  background-image: url("../images/36725_artspot_atelierleeg-07lwD244-768x510.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.showcase:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.8);
+}
+
+.resume-pic {
+  position: absolute;
+  z-index: 1;
+  top: 15vh;
+  left: 40%;
+  border-radius: 100%;
+  width: 14rem;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  position: absolute;
+  z-index: 1;
+  top: 50vh;
+  left: 15%;
+}
+header .icons {
+  margin-top: 1rem;
+}
+header .icons a {
+  padding: 0.4rem;
+}
+header .icons a:hover {
+  color: #64ff00;
+  transition: all 1000ms ease-out;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 500;
+  font-family: "Open Sans", sans-serif;
+  
+}
+h1.lg-heading, h2.lg-heading, h3.lg-heading {
+  font-size: 5rem;
+}
+h1.sm-heading, h2.sm-heading, h3.sm-heading {
+  margin-bottom: 2rem;
+  padding: 0.2rem 1rem;
+  background: rgba(56, 56, 56, 0.5);
+}
+
+h3 {
+  font-size: 2rem;
+  text-align: center;
+  text-decoration: underline;
+  color: rgb(39, 78, 82);
+
+}
+
+a {
+  color: #eee;
+  text-decoration: none;
+}
+
+.secondary-text {
+  color: #62d415;
+}
+
+section {
+  padding: 2rem;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-top: 1em;
+  margin-bottom: 1 em;
+  margin-left: 30px;
+  margin-right: 0;
+  padding-left: 40px;
+  
+}
+
+.light-theme {
+  background-color: #ddd;
+  color: #333;
+}
+
+
+
+
+/*navbar styling */
+
+ 
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 4px 6px;
+  text-decoration: none;
+}
+
+
+
+
+/*footer*/
+footer{
+ background: rgba(88, 74, 74, 0.8);
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*hulp chat*/
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  right: 20px;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 25px;
+  width:80px;
+        height:50px;
+        border-radius:50px;
+        
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+/* Social Icons */
+
+.me-web {
+  margin-top: 0px;
+}
+
+.social:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+.social {
+  -webkit-transform: scale(0.8);
+  color: rgb(37, 37, 37);
+  /* Browser Variations: */
+  -moz-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+}
+
+
+/* Change colour when hover with a mouse */
+
+#social-li:hover {
+  color: #0077B5;
+}
+
+#social-fcc:hover {
+  color: #f77737;
+  
+}
+
+#social-gh:hover {
+  color: #171515;
+}
+
+#social-em:hover {
+  color: #f30909;
+}
+
+
+
+
+
+/********cart*******/
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+.shake {
+  animation: shake .7s;
+}
+
+@keyframes shake {
+  0%, 100%{
+    transform: translateX(0px);
+  }
+  20%, 80% {
+    transform: translateX(-3px) rotate(-7deg);
+  }
+  40%, 60% {
+    transform: translateX(3px) rotate(7deg);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+}
+
+.cart {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 6px;
+  right: 20px;
+  cursor: pointer;
+ 
+  &-modal {
+    position: absolute;
+    padding: 15px;
+    padding-left: 35px;
+    top: 70px;
+    right: 20px;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 2px;
+    display: none;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      right: 10px;
+      width: 0px;
+      height: 0px;
+      border-bottom: solid 10px white;
+      border-left: solid 10px transparent;
+      border-right: solid 10px transparent;
+      
+    }
+  }
+}
+
+.item {
+  box-sizing: border-box;
+  width: 130px;
+  padding: 5px;
+  margin-right: 15px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  transition: transform .5s;
+ 
+  &__name {
+    font-weight: bold;
+    margin: 0 auto;
+  }
+  
+  &__photo {
+    background: #1B5E20;
+    margin: 5px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border-radius: 2px;
+  }
+  
+  &__button {
+    padding: 5px;
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    background-color: #388E3C;
+    color: white;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background .4s;
+    cursor: pointer;
+    
+    &:hover {
+      background: #1B5E20;
+    }
+  }
+}
+
+
+
+.card-img-top{
+  width: 450px;
+  height: 330px;
+  padding: 5px;
+}
+
+
+
+.banner img{
+  height: 582px;
+  width: 100%;
+  opacity: 0.5;
+  
+}
+ .banner{
+   position:relative;
+ }
+ .banner h2{
+   font: 2.4rem 'Francois One', sans-serif;
+   position:absolute;
+   top:20px;
+   left:72%;
+ }
+ table{
+   min-width:100%;
+   margin-top:20px;
+   
+  
+
+  
+   
+ }
+ table td{
+   text-align:center;
+   border-right:2px solid rgb(119, 90, 90);
+   font-family:bold 20px 'arial';
+   
+  
+ }
+ table td:first-child{
+   border-left:2px solid rgb(119, 90, 90);
+   
+ }
+ .selected{
+   color:#CDDC39;
+ }
+
+ .nav-item{
+  margin: 26px;
+}
+ td:hover {background-color:rgba(88, 74, 74, 0.8);}
+
+
+ 
+
+
+
+
+
+
+ /*dropdown*/
+
+ .dropdown {
+  text-align: center;
+
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 15px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(119, 90, 90);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color:  #f59b93;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  -webkit-border-radius: 0 6px 6px 6px;
+  -moz-border-radius: 0 6px 6px;
+  border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #ccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+  border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+  float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  -webkit-border-radius: 6px 0 6px 6px;
+  -moz-border-radius: 6px 0 6px 6px;
+  border-radius: 6px 0 6px 6px;
+}
+
+
+
+
+
+
+/*# sourceMappingURL=style.css.map */
+
